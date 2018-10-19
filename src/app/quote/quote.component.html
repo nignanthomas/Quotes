@@ -10,6 +10,6 @@
     <cite>--{{quote.author}}</cite>
   </blockquote>
   <button (click)='toggleDetails(i)' type="button" name="button">More</button>
-  <app-quote-details *ngIf="quote.showDetails" [quote]='quote' [i]='i'> </app-quote-details>
+  <app-quote-details *ngIf="quote.showDetails" [quote]='quote' (isDelete)='deleteQuote($event, i)' (isPlus)='pluVote($event, i)' (isMinus)='minusVote($event, i)'> </app-quote-details>
 
 </div> <!-- end div display-quotes -->
