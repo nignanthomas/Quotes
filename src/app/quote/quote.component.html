@@ -10,12 +10,6 @@
     <cite>--{{quote.author}}</cite>
   </blockquote>
   <button type="button" name="button">More</button>
-
-  <div class="display-details">
-    <p>posted by: {{quote.username}}</p>
-    <button type="button" name="button">upVote: {{quote.upVote}}</button>
-    <button type="button" name="button">downVote: {{quote.downVote}}</button>
-    <button type="button" name="button">Delete</button>
-  </div> <!-- end div display-details -->
+  <app-quote-details  [quote]='quote'> </app-quote-details>
 
 </div> <!-- end div display-quotes -->
