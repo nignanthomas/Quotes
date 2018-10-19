@@ -1,3 +1,12 @@
-<p>
-  quote works!
-</p>
+<h1>#Geek_Quotes</h1>
+
+<h3>Share some geeky quotes with us and see how people like them</h3>
+
+
+
+<div *ngFor='let quote of quotes'>
+  <h3>{{quote.textQuote}}</h3>
+  <p>Author: {{quote.author}}</p>
+  <p>Posted by: {{quote.username}}</p>
+
+</div>
