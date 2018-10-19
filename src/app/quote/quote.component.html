@@ -5,8 +5,9 @@
 
 
 <div *ngFor='let quote of quotes'>
-  <h3>{{quote.textQuote}}</h3>
-  <p>Author: {{quote.author}}</p>
-  <p>Posted by: {{quote.username}}</p>
-
+  <blockquote>
+    <h3>{{quote.textQuote}}</h3>
+    <cite>--{{quote.author}}</cite>
+    <p>posted by: {{quote.username}}</p>
+  </blockquote>
 </div>
