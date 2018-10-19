@@ -1,5 +1,5 @@
 <div class="display-details">
-  <p>posted by: {{quote.username}}</p>
+  <p>posted by: {{quote.username}} {{quote.submitDate|timePassed}} ago</p>
   <button (click)='votePlus(true)' type="button" name="button">upVote: {{quote.upVote}}</button>
   <button (click)='voteMinus(true)' type="button" name="button">downVote: {{quote.downVote}}</button>
   <button (click)='quoteDelete(true)' type="button" name="button">Delete</button>
