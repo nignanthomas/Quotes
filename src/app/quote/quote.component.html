@@ -4,12 +4,12 @@
 
 
 
-<div class="display-quotes" *ngFor='let quote of quotes'>
+<div class="display-quotes" *ngFor='let quote of quotes, let i = index'>
   <blockquote>
     <h3>{{quote.textQuote}}</h3>
     <cite>--{{quote.author}}</cite>
   </blockquote>
-  <button type="button" name="button">More</button>
-  <app-quote-details  [quote]='quote'> </app-quote-details>
+  <button (click)='toggleDetails(i)' type="button" name="button">More</button>
+  <app-quote-details *ngIf="quote.showDetails" [quote]='quote'> </app-quote-details>
 
 </div> <!-- end div display-quotes -->

@@ -13,6 +13,10 @@ export class QuoteComponent implements OnInit {
     new Quote(2, "Getting information off the Internet is like taking a drink from a fire hydrant.", "Mitchell Kapor", 0, 0, "nignanthomas"),
   ]
 
+  toggleDetails(index) {
+    this.quotes[index].showDetails = !this.quotes[index].showDetails;
+  }
+
   constructor() { }
 
   ngOnInit() {
