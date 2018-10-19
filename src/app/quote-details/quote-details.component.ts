@@ -10,6 +10,7 @@ export class QuoteDetailsComponent implements OnInit {
 
   @Input() quote:Quote;
 
+
   constructor() { }
 
   ngOnInit() {
