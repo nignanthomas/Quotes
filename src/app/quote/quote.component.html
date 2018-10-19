@@ -4,10 +4,18 @@
 
 
 
-<div *ngFor='let quote of quotes'>
+<div class="display-quotes" *ngFor='let quote of quotes'>
   <blockquote>
     <h3>{{quote.textQuote}}</h3>
     <cite>--{{quote.author}}</cite>
-    <p>posted by: {{quote.username}}</p>
   </blockquote>
-</div>
+  <button type="button" name="button">More</button>
+
+  <div class="display-details">
+    <p>posted by: {{quote.username}}</p>
+    <button type="button" name="button">upVote: {{quote.upVote}}</button>
+    <button type="button" name="button">downVote: {{quote.downVote}}</button>
+    <button type="button" name="button">Delete</button>
+  </div> <!-- end div display-details -->
+
+</div> <!-- end div display-quotes -->
