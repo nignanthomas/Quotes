@@ -17,7 +17,26 @@ export class QuoteComponent implements OnInit {
     this.quotes[index].showDetails = !this.quotes[index].showDetails;
   }
 
+  deleteQuote(isDelete, index) {
+    if (isDelete) {
+      let toDelete = confirm("Please, confirm deletion.");
+      if (toDelete) {
+        this.quotes.splice(index, 1)
+      }
+    }
+  }
 
+  plusVote(isPlus, index) {
+    if (isPlus) {
+      this.quotes[index].upVote += 1;
+    }
+  }
+
+  minusVote(isMinus, index) {
+    if (isMinus) {
+      this.quotes[index].downVote += 1;
+    }
+  }
 
   constructor() { }
 
