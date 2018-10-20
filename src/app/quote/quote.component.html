@@ -3,16 +3,26 @@
 <h3>Share some IT related quotes with us and see how people like them</h3>
 
 
+<div class="container">
+  <div class="row">
 
-<div class="display-quotes" *ngFor='let quote of quotes, let i = index'>
-  <div appHighlight class="quote-block">
-    <blockquote>
-      <h3>{{quote.textQuote}}</h3>
-      <cite>--{{quote.author}}</cite>
-    </blockquote>
-    <button (click)='toggleDetails(i)' type="button" name="button">More</button>
-    <app-quote-details *ngIf="quote.showDetails" [quote]='quote' (isDelete)='deleteQuote($event, i)' (isPlus)='plusVote($event, i)' (isMinus)='minusVote($event, i)'> </app-quote-details>
-  </div>
+    <div class="col-md-6">
+      <app-quote-form></app-quote-form>
+    </div> <!-- end div column form -->
 
+    <div class="col-md-6">
+      <div class="display-quotes" *ngFor='let quote of quotes, let i = index'>
+        <div appHighlight class="quote-block">
+          <blockquote>
+            <h3>{{quote.textQuote}}</h3>
+            <cite>--{{quote.author}}</cite>
+          </blockquote>
+          <button (click)='toggleDetails(i)' type="button" name="button">More</button>
+          <app-quote-details *ngIf="quote.showDetails" [quote]='quote' (isDelete)='deleteQuote($event, i)' (isPlus)='plusVote($event, i)' (isMinus)='minusVote($event, i)'> </app-quote-details>
+        </div>
+      </div> <!-- end div display-quotes -->
+    </div> <!-- end div column quotes -->
 
-</div> <!-- end div display-quotes -->
+  </div> <!-- end div row -->
+
+</div> <!-- end div container quotes -->
