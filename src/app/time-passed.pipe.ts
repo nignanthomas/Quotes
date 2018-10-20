@@ -13,26 +13,24 @@ export class TimePassedPipe implements PipeTransform {
 
     var dateDifferenceSeconds=dateDifference*0.001; //converts to seconds
 
-    var days = dateDifferenceSeconds/secondsInADay;
+    var days = Math.round(dateDifferenceSeconds/secondsInADay);
     dateDifferenceSeconds -=(days*secondsInADay);
-    var hours = dateDifferenceSeconds/(60*24) ;
+    var hours = Math.round(dateDifferenceSeconds/(60*24)) ;
     dateDifferenceSeconds -=(hours*(60*24));
-    var minutes = dateDifferenceSeconds/60 ;
-    var seconds = dateDifferenceSeconds-(minutes*60) ;
+    var minutes = Math.round(dateDifferenceSeconds/60) ;
+    var seconds = Math.round(dateDifferenceSeconds-(minutes*60)) ;
 
-    var time = "";
 
     if (days>0) {
-      time += (days + "days ");
+      return days + " days ";
     }
     if (hours>0) {
-      time += (hours + "hours ");
+      return hours + " hours ";
     }
     if (minutes>0) {
-      time += (minutes + "minutes ");
+      return minutes + " minutes ";
     }
-    time += (seconds + "seconds ");
-    time;
+    return seconds + " seconds ";
   }
 
 }
