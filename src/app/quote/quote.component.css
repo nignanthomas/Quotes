@@ -1,0 +1,21 @@
+.header {
+  width: 500px;
+  text-align: center;
+  margin: 0 auto;
+  margin-bottom: 10px;
+  padding-bottom: 30px;
+  padding-top: 10px;
+}
+
+
+.display-quotes {
+  border: 3px solid teal;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+.details {
+  margin-right: 20px;
+  text-align: right;
+  margin-bottom: 5px;
+}

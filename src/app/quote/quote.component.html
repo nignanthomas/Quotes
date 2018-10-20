@@ -1,6 +1,9 @@
-<h1>#Geek_Quotes</h1>
+<div class="header jumbotron">
+  <h1>#Geek_Quotes</h1>
 
-<h3>Share some IT related quotes with us and see how people like them</h3>
+  <h3>Share some IT related quotes with us and see how people like them</h3>
+</div>
+
 
 
 <div class="container">
@@ -15,10 +18,13 @@
         <div appHighlight class="quote-block">
           <blockquote>
             <h3>{{quote.textQuote}}</h3>
-            <cite>--{{quote.author}}</cite>
           </blockquote>
-          <button class="btn-info" (click)='toggleDetails(i)' type="button" name="button">More</button>
-          <app-quote-details *ngIf="quote.showDetails" [quote]='quote' (isDelete)='deleteQuote($event, i)' (isPlus)='plusVote($event, i)' (isMinus)='minusVote($event, i)'> </app-quote-details>
+          <div class="details">
+            <cite>--{{quote.author}}</cite>
+            <br>
+            <button class="btn-info" (click)='toggleDetails(i)' type="button" name="button">More</button>
+            <app-quote-details *ngIf="quote.showDetails" [quote]='quote' (isDelete)='deleteQuote($event, i)' (isPlus)='plusVote($event, i)' (isMinus)='minusVote($event, i)'> </app-quote-details>
+          </div>
         </div>
       </div> <!-- end div display-quotes -->
     </div> <!-- end div column quotes -->
