@@ -1,7 +1,7 @@
 <div class="header jumbotron">
   <h1>#Geek_Quotes</h1>
 
-  <h3>Share some IT related quotes with us and see how people like them</h3>
+  <h4>Share some IT related quotes with us and see how people like them</h4>
 </div>
 
 
@@ -17,7 +17,7 @@
       <div class="display-quotes" *ngFor='let quote of quotes, let i = index'>
         <div appHighlight class="quote-block">
           <blockquote>
-            <h3>{{quote.textQuote}}</h3>
+            <h4>"{{quote.textQuote}}"</h4>
           </blockquote>
           <div class="details">
             <cite>--{{quote.author}}</cite>

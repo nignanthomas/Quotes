@@ -1,0 +1,12 @@
+form {
+  border: 3px solid teal;
+  border-radius: 5px;
+  position: fixed;
+  padding: 10px;
+  background-color: #e1e5ee;
+}
+
+#quote, #author, #user {
+  border: none;
+  border-bottom: 2px solid green;
+}
