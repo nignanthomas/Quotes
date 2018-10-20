@@ -1,6 +1,6 @@
 <div class="display-details">
   <p>posted by: {{quote.username}} {{quote.submitDate|timePassed}} ago</p>
-  <button (click)='votePlus(true)' type="button" name="button">upVote: {{quote.upVote}}</button>
-  <button (click)='voteMinus(true)' type="button" name="button">downVote: {{quote.downVote}}</button>
-  <button (click)='quoteDelete(true)' type="button" name="button">Delete</button>
+  <button class="btn-success" (click)='votePlus(true)' type="button" name="button">upVote: {{quote.upVote}}</button>
+  <button class="btn-warning" (click)='voteMinus(true)' type="button" name="button">downVote: {{quote.downVote}}</button>
+  <button class="btn-danger" (click)='quoteDelete(true)' type="button" name="button">Delete</button>
 </div> <!-- end div display-details -->

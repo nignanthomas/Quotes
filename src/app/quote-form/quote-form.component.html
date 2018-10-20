@@ -1,12 +1,12 @@
 <div class="container-fluid">
     <div class="row">
-        <form #goalForm='ngForm'>
+        <form (ngSubmit)='submitQuote()' #goalForm='ngForm'>
 
           <!-- Description Input -->
           <div class="form-group">
             <label for="quote">Quote: </label>
-            <textarea class="form-control" id="quote" rows="4" [(ngModel)]="newQuote.textQuote" name="textQuote" #textQuote="ngModel" required></textarea>
-            <div [hidden]="textQuote.valid || textQuote.pristine" class="alert alert-danger">
+            <textarea class="form-control" id="quote" cols ="20" rows="3" [(ngModel)]="newQuote.textQuote" name="textQuote" #textQuote="ngModel" required></textarea>
+            <div [hidden]="textQuote.valid || textQuote.pristine" class="alert-danger">
               <p> Quote is Required</p>
             </div>
           </div>
@@ -15,7 +15,7 @@
             <div class="form-group">
                 <label for="author">Author: </label>
                 <input type="text"  class="form-control" id="author" [(ngModel)]="newQuote.author" name="author" #author="ngModel" required>
-                <div [hidden]="author.valid || author.pristine" class="alert alert-danger">
+                <div [hidden]="author.valid || author.pristine" class="alert-danger">
                     <p> Author is Required</p>
                 </div>
             </div>
@@ -24,11 +24,11 @@
             <div class="form-group">
                 <label for="user">Your name: </label>
                 <input type='text' class="form-control" id="user" [(ngModel)]="newQuote.username" name="username" #username="ngModel" required >
-                <div [hidden]="username.valid || username.pristine" class="alert alert-danger">
+                <div [hidden]="username.valid || username.pristine" class="alert-danger">
                     <p> Username is Required</p>
                 </div>
             </div>
-            <button type="Submit" class="btn btn-success btn-lg">Add Quote</button>
+            <button type="Submit" class="btn-success btn-md">Post Quote</button>
         </form>
     </div>
 </div>
