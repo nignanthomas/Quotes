@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { Quote } from '../quote'
+import { Quote } from '../quote';
+import swal from 'sweetalert';
+
 
 @Component({
   selector: 'app-quote',
@@ -40,10 +42,20 @@ export class QuoteComponent implements OnInit {
 
 
   addNewQuote(quote){
+    if (quote.textQuote == "" || quote.author == "" || quote.username == "") {
+      swal({
+        title: "Empty Field(s)!",
+        text: "Please fill all input fields before posting!",
+        icon: "warning",
+        // button: "Got it!"
+      });
+      // alert("Empty field");
+    } else {
           let quoteLength = this.quotes.length;
           quote.id=quoteLength+1;
           quote.submitDate = new Date();
           this.quotes.push(quote);
+    }
   }
 
 
